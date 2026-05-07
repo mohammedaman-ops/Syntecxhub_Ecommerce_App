@@ -1,0 +1,319 @@
+
+:root {
+  --navy: #131921;
+  --gold: #febd69;
+  --glass: rgba(255, 255, 255, 0.96);
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  background: #f4f7f9;
+  color: var(--navy);
+}
+
+
+.site-wrapper {
+  min-height: 100vh;
+}
+
+
+.navbar {
+  width: 100%;
+  background: var(--navy);
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 18px 5%;
+}
+
+.navbar h1 {
+  cursor: pointer;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-links button {
+  border: none;
+  outline: none;
+
+  padding: 12px 18px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+
+  transition: 0.2s ease;
+}
+
+.nav-links button:hover {
+  transform: translateY(-2px);
+}
+
+.cart-pill {
+  background: var(--gold);
+}
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 30px;
+  padding: 40px 5%;
+}
+
+
+.glass-card {
+  background: var(--glass);
+
+  border-radius: 16px;
+  border: 1px solid #ddd;
+
+  padding: 22px;
+  text-align: center;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.product-card img {
+  width: 100%;
+  height: 240px;
+
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  margin-top: 18px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.price,
+.price-tag {
+  margin: 14px 0;
+
+  font-size: 24px;
+  font-weight: bold;
+
+  color: #b12704;
+}
+
+
+.add-btn,
+.buy-btn,
+.primary-btn,
+.secondary-btn {
+  width: 100%;
+
+  padding: 14px;
+  margin-top: 12px;
+
+  border: 1px solid #a88734;
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  background: var(--gold);
+
+  transition: 0.2s ease;
+}
+
+.add-btn:hover,
+.buy-btn:hover,
+.primary-btn:hover,
+.secondary-btn:hover {
+  opacity: 0.9;
+}
+
+.secondary-btn {
+  background: #e1e1e1;
+  border: none;
+}
+
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px 20px;
+}
+
+
+.login-box,
+.track-box {
+  width: 100%;
+  max-width: 420px;
+}
+
+
+input {
+  width: 100%;
+
+  padding: 14px;
+  margin-top: 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+
+.checkout-container {
+  padding: 40px 5%;
+}
+
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 30px;
+}
+
+.payment-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.payment-grid button {
+  padding: 14px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  background: white;
+}
+
+.payment-grid button.active {
+  background: #eef;
+  border: 2px solid var(--navy);
+}
+
+.total {
+  margin: 20px 0;
+
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+@media (max-width: 1023px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar {
+    padding: 16px 30px;
+  }
+
+  .navbar h1 {
+    font-size: 28px;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+
+    text-align: center;
+    padding: 20px;
+  }
+
+  .navbar h1 {
+    font-size: 24px;
+  }
+
+  .nav-links {
+    width: 100%;
+
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links button {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+
+  .product-card h3 {
+    font-size: 22px;
+  }
+
+  .price,
+  .price-tag {
+    font-size: 22px;
+  }
+
+  .checkout-container {
+    padding: 20px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .login-box,
+  .track-box {
+    width: 100%;
+  }
+}
